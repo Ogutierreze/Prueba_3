@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+uint8_t left_counter=0;
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -62,6 +63,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   UNUSED(GPIO_Pin);
 
   if(GPIO_Pin==BUTTON_1_Pin){
+	  left_counter==1;
 
 
   }
@@ -110,6 +112,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+	  if(left_counter =! 0){
+		  HAL_GPIO_WritePin(BUTTON_1_GPIO_Port, BUTTON_1_Pin, 0);
+	  }
 
     /* USER CODE BEGIN 3 */
   }
