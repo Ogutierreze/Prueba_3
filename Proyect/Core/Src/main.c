@@ -61,6 +61,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   /* Prevent unused argument(s) compilation warning */
   UNUSED(GPIO_Pin);
 
+  if(GPIO_Pin==BUTTON_1_Pin){
+
+
+  }
+
   /* NOTE: This function should not be modified, when the callback is needed,
            the HAL_GPIO_EXTI_Callback could be implemented in the user file
    */
